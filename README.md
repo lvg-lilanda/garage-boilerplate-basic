@@ -170,6 +170,7 @@ See [CLAUDE.md](CLAUDE.md) for the full harness reference.
 | Security | [docs/SECURITY.md](docs/SECURITY.md) |
 | Git workflow | [docs/GIT-WORKFLOW.md](docs/GIT-WORKFLOW.md) |
 | CI/CD & deployment | [docs/CI-CD.md](docs/CI-CD.md) |
+| Team page requirements | [docs/TEAM-PAGE-REQUIREMENTS.md](docs/TEAM-PAGE-REQUIREMENTS.md) |
 
 ## Deployment
 

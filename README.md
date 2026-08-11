@@ -171,6 +171,7 @@ See [CLAUDE.md](CLAUDE.md) for the full harness reference.
 | Git workflow | [docs/GIT-WORKFLOW.md](docs/GIT-WORKFLOW.md) |
 | CI/CD & deployment | [docs/CI-CD.md](docs/CI-CD.md) |
 | Team page requirements | [docs/TEAM-PAGE-REQUIREMENTS.md](docs/TEAM-PAGE-REQUIREMENTS.md) |
+| Updated team page requirements | [docs/TEAM-PAGE-REQUIREMENTS-VERSION2.md](docs/TEAM-PAGE-REQUIREMENTS-VERSION2.md) |
 
 ## Deployment
 

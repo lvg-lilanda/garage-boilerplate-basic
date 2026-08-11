@@ -31,7 +31,9 @@ export default function SignInPage() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     if (params.get('verification') === 'sent') {
-      toast.success('Verification email sent. Verify your email, then sign in.')
+      toast.success('Verification email sent. Verify your email, then sign in.', {
+        position: 'top-center',
+      })
     }
   }, [])
 
@@ -40,14 +42,14 @@ export default function SignInPage() {
   const onSubmit = async (data: LoginInput) => {
     try {
       await signInWithEmail(data.email, data.password)
-      toast.success('Signed in successfully')
+      toast.success('Signed in successfully', { position: 'top-center' })
       router.replace('/dashboard')
       router.refresh()
     } catch (error: unknown) {
       if (error instanceof Error && error.message.includes('email-not-verified')) {
-        toast.error('Please verify your email before signing in.')
+        toast.error('Please verify your email before signing in.', { position: 'top-center' })
       } else {
-        toast.error('Invalid email or password')
+        toast.error('Invalid email or password', { position: 'top-center' })
       }
     }
   }
@@ -57,12 +59,12 @@ export default function SignInPage() {
       await signInWithGoogle()
       router.replace('/dashboard')
     } catch {
-      toast.error('Google sign-in failed. Please try again.')
+      toast.error('Google sign-in failed. Please try again.', { position: 'top-center' })
     }
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 rounded-lg border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
       <div className="space-y-1 text-center">
         <h1 className="text-2xl font-bold tracking-tight">Sign in</h1>
         <p className="text-sm text-zinc-500">Enter your credentials to continue</p>
@@ -71,7 +73,7 @@ export default function SignInPage() {
       <button
         type="button"
         onClick={handleGoogleSignIn}
-        className="flex w-full items-center justify-center gap-3 rounded-md border border-zinc-300 bg-white px-4 py-2.5 text-sm font-medium shadow-sm transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+        className="flex w-full items-center justify-center gap-3 rounded-full border border-zinc-300 bg-white px-4 py-2.5 text-sm font-medium shadow-sm transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-800"
       >
         <svg className="h-4 w-4" viewBox="0 0 24 24" aria-hidden="true">
           <path
@@ -99,7 +101,7 @@ export default function SignInPage() {
           <span className="w-full border-t border-zinc-200 dark:border-zinc-700" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-zinc-50 px-2 text-zinc-400 dark:bg-zinc-950">or</span>
+          <span className="bg-white px-2 text-zinc-400 dark:bg-zinc-900">or</span>
         </div>
       </div>
 
@@ -151,7 +153,7 @@ export default function SignInPage() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full rounded-md bg-black px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+          className="w-full rounded-full bg-black px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
         >
           {isSubmitting ? 'Signing in…' : 'Sign in'}
         </button>

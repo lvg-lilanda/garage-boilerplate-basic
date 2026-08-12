@@ -36,18 +36,18 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
           src={member.photoUrl ?? undefined}
           alt={member.name}
           onError={() => setImageFailed(true)}
-          className="h-20 w-20 rounded-full object-cover"
+          className="mx-auto h-28 w-28 rounded-md border border-zinc-200 object-cover dark:border-zinc-700"
         />
       ) : (
         // Initials placeholder — used when photoUrl is null or the image failed to load
-        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-zinc-100 text-sm font-semibold text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400">
+        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-md border border-zinc-200 bg-zinc-100 text-lg font-semibold text-zinc-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-400">
           {getInitials(member.name)}
         </div>
       )}
 
       {/* break-words wrap instead of overflowing the card */}
-      <p className="mt-3 font-medium break-words">{member.name}</p>
-      <p className="text-sm text-zinc-500 break-words">{member.role}</p>
+      <p className="mt-3 font-bold break-words">{member.name}</p>
+      <p className="text-sm text-brand-500 break-words">{member.role}</p>
 
       <p className="mt-2 text-sm text-zinc-600 break-words dark:text-zinc-300">
         {/*Uses "No bio added" when the member has no blurb*/}
@@ -56,7 +56,7 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
           <button
             type="button"
             onClick={() => setExpanded((prev) => !prev)}
-            className="ml-1 font-medium text-zinc-900 hover:underline dark:text-white"
+            className="ml-1 font-bold text-zinc-900 hover:underline dark:text-white"
           >
             {expanded ? 'See less' : 'See more'}
           </button>

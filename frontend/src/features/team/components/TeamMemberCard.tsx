@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import type { TeamMember } from '../types'
 
-// Blurbs longer than 100 characters gets cut off with a "See more" toggle
-const BLURB_TRUNCATE_LENGTH = 100
+// Blurbs longer than 200 characters gets cut off with a "See more" toggle
+const BLURB_TRUNCATE_LENGTH = 200
 
 // Fallback: Initials shown in the photo circle when no photo available
 function getInitials(name: string): string {

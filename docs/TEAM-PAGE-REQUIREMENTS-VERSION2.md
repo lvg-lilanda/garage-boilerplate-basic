@@ -35,7 +35,7 @@ The visual design may be reviewed and adjusted during the design phases to ensur
 | -------- | ---------------- |
 | Invalid login credentials | The login attempt fails and the existing error message is displayed using the current error styling, positioned at the centre-top of the page instead of the current top-right position. |
 | Required login field empty | The login attempt fails and the existing validation error message is displayed using the current error styling. |
-| Direct Team page access without logging in** | The Team page redirects back to login if accessed directly without a session. The Team page is not accessible without valid login. |
+| Direct Team page access without logging in | The Team page redirects back to login if accessed directly without a session. The Team page is not accessible without valid login. |
 | Member photo is missing | A placeholder image is displayed. |
 | Member photo cannot be loaded | A placeholder image is displayed. |
 | Member name is very long | The text wraps appropriately while maintaining the layout. |
@@ -50,91 +50,91 @@ The visual design may be reviewed and adjusted during the design phases to ensur
 ### Login Page Styling
 
 Given the user is on the login page
-When the login page is displayed
-Then the approved styling requirements must be displayed.
+when the login page is displayed
+then the approved styling requirements must be displayed.
 
 ### Login Page Authentication and Session Behaviour
 
 Given the user has valid login credentials
-When the user successfully logs in
-Then the existing authentication logic and session behaviour must remain unchanged.
+when the user successfully logs in
+then the existing authentication logic and session behaviour must remain unchanged.
 
 ### Team Page Access
 
 Given the user has valid login credentials
-When the user successfully logs in
-Then the user can access the Team page.
+when the user successfully logs in
+then the user can access the Team page.
 
 Given the user does not have a session
-When the user attempts to access the Team page directly
-Then the user must be redirected back to login.
+when the user attempts to access the Team page directly
+then the user must be redirected back to login.
 
 ### Invalid Login Errors
 
 Given** the user is on the login page
-When the user enters invalid login credentials
-Then the login attempt must fail, and the existing error message must be displayed using the current error styling at the centre-top of the page.
+when the user enters invalid login credentials
+then the login attempt must fail, and the existing error message must be displayed using the current error styling at the centre-top of the page.
 
 Given the user is on the login page
-When the user leaves a required field empty
-Then the validation error message must be displayed using the current error styling.
+when the user leaves a required field empty
+then the validation error message must be displayed using the current error styling.
 
 ### Team Name Display
 
 Given the user has successfully logged in
-When the Team page is displayed
-Then the team's name must be displayed as the Team page heading.
+when the Team page is displayed
+then the team's name must be displayed as the Team page heading.
 
 ### Team Member Information
 
 Given team members are available
-When the Team page is displayed
-Then each team member must display their name, role, photo or placeholder, and blurb where provided.
+when the Team page is displayed
+then each team member must display their name, role, photo or placeholder, and blurb where provided.
 
 ### Missing Member Photo
 
 Given a team member does not have a photo available
-When the Team page is displayed
-Then a placeholder image must be displayed in place of the missing photo.
+when the Team page is displayed
+then a placeholder image must be displayed in place of the missing photo.
 
 ### Member Photo Cannot Be Loaded
 
 Given a team member has a photo that cannot be loaded
-When the Team page attempts to display the photo
-Then a placeholder image must be displayed.
+when the Team page attempts to display the photo
+then a placeholder image must be displayed.
 
 ### Long Member Name
 
 Given a team member has a long name
-When the Team page is displayed
-Then the name must wrap appropriately while maintaining the layout.
+when the Team page is displayed
+then the name must wrap appropriately while maintaining the layout.
 
 ### Long Member Role
 
 Given a team member has a long role
-When the Team page is displayed
-Then the role must wrap appropriately while maintaining the layout.
+when the Team page is displayed
+then the role must wrap appropriately while maintaining the layout.
 
 ### Long Member Blurb
 
 Given a team member has a long blurb
-When the Team page is displayed
-Then the blurb must not exceed 200 characters.
+when the Team page is displayed
+then the blurb must not exceed 200 characters.
 
 ### Missing Member Blurb
 
-Given** a team member does not have a blurb
-When the Team page is displayed
-Then an appropriate message, such as "No bio added", must be displayed in place of the missing blurb.
+Given a team member does not have a blurb
+when the Team page is displayed
+then an appropriate message, such as "No bio added", must be displayed in place of the missing blurb.
 
 ### No Team Members
 
 Given no team members are available
-When the Team page is displayed
-Then an appropriate message, such as "No team members available", must be displayed.
+when the Team page is displayed
+then an appropriate message, such as "No team members available", must be displayed.
 
 ### Different Screen Sizes
 
 Given the user accesses the pages in different screen sizes
-When the page is displayed
-Then the content must be displayed in a clear and responsive layout.
+when the page is displayed
+then the content must be displayed in a clear and responsive layout.

@@ -33,7 +33,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: '5',
-    name: 'Dinesh Amarakone',
+    name: 'Dinesh Premanath Amarakone Urulugastenne Mudiyanselage',
     role: 'Developer 02',
     photoUrl: null,
     blurb: null,

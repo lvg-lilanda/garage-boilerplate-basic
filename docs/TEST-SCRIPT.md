@@ -23,7 +23,7 @@ The testing covers the following areas:
 | ID | Test | Expected Result | Actual Result | Status | Evidence |
 |---|---|---|---|---|---|
 | T01 | Open deployed URL | Login page loads without an application error. | The deployed application successfully loaded without errors. | Pass | [Deployed application](https://garage-boilerplate-basic-frontend-git-fe-fdf70a-li-landavaradan.vercel.app/auth/signin) |
-| T02 | Compare login page with approved design | Required login elements and approved styling are displayed. | Login elements and styling match the Figma mock-up. Exception: Email and Password labels are positioned above the input fields. | Pass | frontend/public/images/test/LoginPage.png /Users/anujipeiris/Library/CloudStorage/OneDrive-RMITUniversity/Year3 -Sem2/Project 1/garage-boilerplate-basic-3/frontend/public/images/test/image1.png | 
+| T02 | Compare login page with approved design | Required login elements and approved styling are displayed. | Login elements and styling match the Figma mock-up. Exception: Email and Password labels are positioned above the input fields. | Pass | ![alt text](../frontend/public/images/test/image1.png) | 
 | T03 | Log in with valid credentials | User is authenticated and taken to the Team page. | Valid credentials successfully authenticated the user and the Team page loaded successfully. | Pass | frontend/public/images/test/image3.png |
 | T04 | Attempt an invalid login | Login is rejected using the existing validation behaviour. | Invalid credentials were rejected and login was denied. | Pass | frontend/public/images/test/InvalidLogin.png |
 | T05 | Open Team page URL while logged out | User is redirected to the login page. | User was successfully redirected to the login page. | Pass | frontend/public/images/test/LoginPage.png |
@@ -34,4 +34,3 @@ The testing covers the following areas:
 | T10 | Test long biography | Biography is collapsed and can be expanded and collapsed correctly. | Long biographies were truncated and the “See more” and “See less” functionality allowed users to expand and collapse the content. | Pass | frontend/public/images/test/LongBio.png frontend/public/images/test/TruncatedBio.png |
 | T11 | Test missing photo | Member initials or the approved placeholder are displayed. | Missing profile photos displayed the approved placeholder. | Pass | frontend/public/images/test/NoImagePlaceHolder.png |
 | T12 | Test missing biography | Approved placeholder text is displayed. | The placeholder text “No bio added” was displayed when a biography was unavailable. | Pass | frontend/public/images/test/NoBioLongNameCase.png |
-/Users/anujipeiris/Library/CloudStorage/OneDrive-RMITUniversity/Year3 -Sem2/Project 1/garage-boilerplate-basic-3/frontend/
